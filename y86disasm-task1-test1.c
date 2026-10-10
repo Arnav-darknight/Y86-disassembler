@@ -28,8 +28,6 @@ int main(int argc, char **argv) {
     unsigned char instruction[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     convertStrToByteCode(buffer, instruction, 10);
 
-    // TODO: From here, your task is to complete the implementation so that all
-    // y86 opcodes can be disassembled. Any undisassembled opcode should display
   switch (instruction[0])
   {
       case 0x00: 
@@ -88,14 +86,6 @@ int main(int argc, char **argv) {
 
   return 0;
 }
-
-/****************************************************************************
-N.B. You do not need to modify or work in this function.
-Description:
-This function converts a line of machine code read from the text file
-into machine byte code.
-The machine code is stored in an unsigned char array.
-******************************************************************************/
 int convertStrToByteCode(char *str, unsigned char inst[], int size) {
   int numHexDigits = 0;
   char *endstr;
